@@ -31,14 +31,14 @@ STEPS TO INITIALIZE THE DATABASE
     GRANT CREATE ON SCHEMA public TO recipe;
 
 
-5. GO TO findmad directory TERMINAL and install requirements.txt
+5. GO TO Findmad directory TERMINAL and install requirements.txt
     pip install -r requirements.txt
 
 
 6. Copy path from create_tables.sql in vscode and upload create_tables.sql to database 
         psql -U recipe -d recipe -h localhost -p 5433 -f /pathto/create_tables.sql
     Example:
-        psql -U recipe -d recipe -h localhost -p 5433 -f /Users/marcusfriis-hansen/Desktop/Uni/Databases_and_Information_Systems/project/Fridge/Findmad/create_tables.sql
+        psql -U recipe -d recipe -h localhost -p 5433 -f /Users/marcusfriis-hansen/Desktop/Uni/Databases_and_Information_Systems/project/DIS-project/Findmad/create_tables.sql
 
 
 7. open a psgl interactive shell in recipe database as recipe user
@@ -48,11 +48,13 @@ STEPS TO INITIALIZE THE DATABASE
 8.upload data to database
         \copy recipe(name,n_steps,steps,description,ingredients,n_ingredients) FROM /path_to/DATA.csv DELIMITER ',' CSV HEADER;
     Example:
-        \copy recipe(name,n_steps,steps,description,ingredients,n_ingredients) FROM /Users/marcusfriis-hansen/Desktop/Uni/Databases_and_Information_Systems/project/Fridge/Findmad/DATA.csv DELIMITER ',' CSV HEADER;
+        \copy recipe(name,n_steps,steps,description,ingredients,n_ingredients) FROM /Users/marcusfriis-hansen/Desktop/Uni/Databases_and_Information_Systems/project/DIS-project/Findmad/DATA.csv DELIMITER ',' CSV HEADER;
 
 
 9. run the app from the "findmad folder" 
     python run.py
+
+10. copy the link and paste it into a browsers
 
 
 IF SOMETHING WENT WRONG AND YOU WANT TO START OVER:
