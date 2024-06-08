@@ -1,3 +1,12 @@
+MADE BY
+Noah Wenneberg Junge - qxk266 - zqw671@alumni.ku.dk
+And
+Marcus Frehr Friis-Hansen - lns611 - lns611@alumni.ku.dk
+
+Group 30
+
+
+
 
 STEPS TO INITIALIZE THE DATABASE
 1. Star by opening an psql interactive session:
