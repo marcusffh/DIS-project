@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Recipe</h1>
+        <form action="{{ url_for('add_recipe') }}" method="post">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.name.label }}<br>
+                {{ form.name(size=20) }}<br>
+                {% for error in form.name.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.steps.label }}<br>
+                {{ form.steps(size=20) }}<br>
+                {% for error in form.steps.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.ingredients.label }}<br>
+                {{ form.ingredients(size=20) }}<br>
+                {% for error in form.ingredients.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.n_steps.label }}<br>
+                {{ form.n_steps() }}<br>
+                {% for error in form.n_steps.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.n_ingredients.label }}<br>
+                {{ form.n_ingredients() }}<br>
+                {% for error in form.n_ingredients.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+        <p><a href="{{ url_for('home') }}">Back to Home</a></p>
+    </div>
+</body>
+</html>
